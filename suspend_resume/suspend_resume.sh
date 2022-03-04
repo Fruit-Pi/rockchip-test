@@ -43,6 +43,11 @@ auto_suspend_resume()
 auto_suspend_resume_rtc()
 {
     cnt=0
+
+    # set sys time same with rtc
+    hwclock --systohc
+    hwclock -w
+
     while true; do
     echo "have done $cnt suspend/resume"
     if [ $cnt -ge $MAX_CYCLES ]
