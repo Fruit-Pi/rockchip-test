@@ -27,7 +27,7 @@ npu_stress_test()
 
 npu_scale_frequency_test()
 {
-	bash ${DIR_NPU}/npu_freq_scaling.sh
+	bash ${DIR_NPU}/npu_freq_scaling.sh 86400 2
 }
 
 rknn_demo_test()
